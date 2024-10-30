@@ -1,7 +1,7 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { Icon } from "astro-icon/components";
-import { SITE_TITLE, BASE_URL } from "../consts";
+import { SITE_TITLE } from "../consts";
 ---
 
 <div class="drawer z-10">
@@ -21,10 +21,8 @@ import { SITE_TITLE, BASE_URL } from "../consts";
 				<ul class="menu menu-horizontal">
 					<!-- Navbar menu content here -->
 					<li><HeaderLink href="/">Home</HeaderLink></li>
-					<li>
-						<HeaderLink href={BASE_URL + "/services/"}>Services</HeaderLink>
-					</li>
-					<li><HeaderLink href={BASE_URL + "/about/"}>About</HeaderLink></li>
+					<li><HeaderLink href="/services">Services</HeaderLink></li>
+					<li><HeaderLink href="/about">About</HeaderLink></li>
 				</ul>
 				<div class="divider divider-horizontal"></div>
 				<ul class="menu menu-horizontal">
@@ -39,9 +37,7 @@ import { SITE_TITLE, BASE_URL } from "../consts";
 		></label>
 		<ul class="menu bg-base-200 min-h-full w-80 p-4">
 			<!-- Sidebar content here -->
-			<li>
-				<strong class="mx-2 flex-1 px-2"><a href="/">{SITE_TITLE}</a></strong>
-			</li>
+			<li><strong class="mx-2 flex-1 px-2"><a href="/">{SITE_TITLE}</a></strong></li>
 			<li><HeaderLink href="/">Home</HeaderLink></li>
 			<li><HeaderLink href="/blog">Blog</HeaderLink></li>
 			<li><HeaderLink href="/about">About</HeaderLink></li>

@@ -1,0 +1,22 @@
+---
+import { Icon } from "astro-icon/components";
+const { username, review, rank } = Astro.props;
+
+---
+
+<div class="card bg-base-200 shadow-lg rounded-sm">
+  <div class="card-body">
+    <div class="flex gap-4">
+      <div class="avatar placeholder">
+        <div class="bg-neutral text-neutral-content w-8 rounded-full">
+          <span class="text-xs">0</span>
+        </div>
+      </div>
+      <h2 class="card-title">{username}</h2>
+      <span class="ml-auto">{"⭐".repeat(rank)}</span>
+    </div>
+    <p class="text-sm md:text-">
+      "{review}"
+    </p>
+  </div>
+</div>

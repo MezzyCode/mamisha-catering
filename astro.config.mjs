@@ -6,7 +6,7 @@ import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://mezzycode.github.io',
+    site: 'https://mamisha-catering.pages.dev',
     integrations: [
       mdx(),
       sitemap(),

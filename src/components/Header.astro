@@ -2,6 +2,7 @@
 import HeaderLink from "./HeaderLink.astro";
 import { Icon } from "astro-icon/components";
 import { SITE_TITLE } from "../consts";
+import { Image } from "astro:assets";
 ---
 
 <div class="drawer z-10">
@@ -12,11 +13,13 @@ import { SITE_TITLE } from "../consts";
 			<label
 				for="my-drawer-3"
 				aria-label="open sidebar"
-				class="btn btn-square btn-ghost flex-none md:hidden"
+				class="btn btn-square btn-ghost flex-none md:hidden order-2"
 			>
 				<Icon class="text-3xl" name="mdi--hamburger-menu" />
 			</label>
-			<strong class="mx-2 flex-1 px-2"><a href="/">{SITE_TITLE}</a></strong>
+			<a href="/" class="flex-1 mx-2 px-2">
+				<Image src="/logo.svg" width={175} height={60} alt="Blessy Time Logo" />
+			</a>
 			<div class="hidden flex-none md:flex">
 				<ul class="menu menu-horizontal">
 					<!-- Navbar menu content here -->
@@ -37,7 +40,16 @@ import { SITE_TITLE } from "../consts";
 		></label>
 		<ul class="menu bg-base-200 min-h-full w-80 p-4">
 			<!-- Sidebar content here -->
-			<li><strong class="mx-2 flex-1 px-2"><a href="/">{SITE_TITLE}</a></strong></li>
+			<li>
+				<a href="/" class="flex-1 mx-2 px-2">
+					<Image
+						src="/logo.svg"
+						width={175}
+						height={60}
+						alt="Blessy Time Logo"
+					/>
+				</a>
+			</li>
 			<li><HeaderLink href="/">Home</HeaderLink></li>
 			<li><HeaderLink href="/blog">Blog</HeaderLink></li>
 			<li><HeaderLink href="/about">About</HeaderLink></li>
